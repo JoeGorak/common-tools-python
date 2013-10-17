@@ -31,6 +31,11 @@ def getNumberFrom( digits ):
         num = num * 10 + digit
     return num
 
+def gcd( a, b ):
+    if a == b: return a
+    while b > 0: a, b = b, a % b
+    return a
+
 if __name__ == '__main__':
     print( getDigitsIn( -1234 ) )
     print( getNumberFrom( [1, 2, 3, 4] ) )
